@@ -13,8 +13,8 @@ def receive_all(sock, n):
     return data
 
 def main():
-    server_ip = '0.0.0.0'
-    server_port = 38496
+    server_ip = 'localhost'
+    server_port = 8080
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
         server_socket.bind((server_ip, server_port))

@@ -14,7 +14,7 @@ print("Model loaded!")
 if __name__ == "__main__":
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
         print("Connecting to socket...")
-        client_socket.connect(('localhost', 38496))
+        client_socket.connect(('localhost', 8080))
         print('Connected to socket')
 
         t = time.time()
