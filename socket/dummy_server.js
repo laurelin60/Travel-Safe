@@ -17,11 +17,11 @@ wss.on("connection", (ws, req) => {
         console.log(message)
         let senderId = "";
 
-        if (message["id"]) {
+        if (message["data"]) {
             senderId = message["id"];
+            sendToVr(senderId, {type: "yolo", data: message["data"]})
+            console.log('sent to VR')
         }
-
-        sendToOthers(senderId, JSON.stringify({ type: message["type"] }));
     });
 
     ws.on("close", () => {
@@ -38,10 +38,10 @@ function generateId() {
     }
 }
 
-function sendToOthers(senderId, message) {
+function sendToVr(senderId, message) {
     for (const id in clients) {
         if (id !== senderId) {
-            clients[id].send(message);
+            clients[id].send(JSON.stringify(message));
         }
     }
 }
