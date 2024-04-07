@@ -94,6 +94,12 @@ public class WebSocketClient : MonoBehaviour
                     break;
                 case "yolo":
                     Debug.Log("Received yolo");
+                    /**
+                    * class: string;
+                    * conf: number;
+                    * box: list[number] (len 4)
+                    */
+
                     Debug.Log(json["data"]);
                     break;
             }
@@ -127,6 +133,18 @@ public class WebSocketClient : MonoBehaviour
     {
         SetCircleColor(_ws.IsAlive ? Color.green : Color.red);
     }
+
+    // private void SendGameStart()
+    // {
+    //     Debug.Log("Sending gameStart message to server");
+    //     var message = new Dictionary<string, string>
+    //     {
+    //         { "type", "startGame" }, { "id", _clientId }
+    //     };
+    //     var json = JsonConvert.SerializeObject(message);
+    //     _ws.Send(json);
+    //     SocketTransferIndicator();
+    // }
 
     private void SendGameEnd()
     {
