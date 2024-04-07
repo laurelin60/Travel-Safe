@@ -11,7 +11,10 @@ wss.on("connection", (ws, req) => {
     ws.send(JSON.stringify({ type: "id", id }));
 
     ws.on("message", (message) => {
+        console.log('Received message')
         message = JSON.parse(message);
+
+        console.log(message)
         let senderId = "";
 
         if (message["id"]) {
