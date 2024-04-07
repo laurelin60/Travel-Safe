@@ -8,7 +8,7 @@ from ultralytics import YOLO
 from PIL import Image
 
 print("Loading model...")
-model = YOLO('yolov8s.pt') # load an official model
+model = YOLO('../yolov8s.pt') # load an official model
 print("Model loaded!")
 
 if __name__ == "__main__":
@@ -32,7 +32,7 @@ if __name__ == "__main__":
             while True:
                 print('Inside screenshot loop')
 
-                image_path = 'dog.jpg' # Hard-coded test image
+                image_path = 'dog.jpg'  # Hard-coded test image
                 image = Image.open(image_path)
                 screenshot_bgr = np.array(image)[:, :, :3]  # Convert the PIL image to a numpy array
 
