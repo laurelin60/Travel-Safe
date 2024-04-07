@@ -27,10 +27,6 @@ public class WebSocketClient : MonoBehaviour
         _ws.OnClose += OnClose;
 
         _ws.Connect();
-
-        // GameManager.OnDuckFlyAway += () => Invoke(nameof(SendNextLetter), 1f);
-        // GameManager.OnDuckShot += () => Invoke(nameof(SendNextLetter), 2f);
-        // GameManager.OnFinish += SendGameEnd;
     }
 
     private void Awake()
@@ -54,10 +50,9 @@ public class WebSocketClient : MonoBehaviour
     private void OnOpen(object sender, System.EventArgs e)
     {
         Debug.Log("WebSocket connection opened");
+
         // Set circle color to green when WebSocket is connected
         SetCircleColor(Color.green);
-
-        // Invoke(nameof(SendGameStart), 2.5f);
     }
 
     private void OnMessage(object sender, MessageEventArgs e)
@@ -68,6 +63,7 @@ public class WebSocketClient : MonoBehaviour
     private void OnError(object sender, ErrorEventArgs e)
     {
         Debug.LogError("WebSocket error: " + e.Message);
+
         // Set circle color to red on error
         SetCircleColor(Color.red);
     }
@@ -75,6 +71,7 @@ public class WebSocketClient : MonoBehaviour
     private void OnClose(object sender, CloseEventArgs e)
     {
         Debug.Log("WebSocket connection closed with reason: " + e.Reason);
+
         // Set circle color to red on close
         SetCircleColor(Color.red);
     }
@@ -130,18 +127,6 @@ public class WebSocketClient : MonoBehaviour
     {
         SetCircleColor(_ws.IsAlive ? Color.green : Color.red);
     }
-
-    // private void SendGameStart()
-    // {
-    //     Debug.Log("Sending gameStart message to server");
-    //     var message = new Dictionary<string, string>
-    //     {
-    //         { "type", "startGame" }, { "id", _clientId }
-    //     };
-    //     var json = JsonConvert.SerializeObject(message);
-    //     _ws.Send(json);
-    //     SocketTransferIndicator();
-    // }
 
     private void SendGameEnd()
     {
