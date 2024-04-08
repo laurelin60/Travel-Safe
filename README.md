@@ -20,6 +20,30 @@
 
 <br>
 
+## Our Pitch Video (click it 💖)
+
 <p align="center">
+  <a href="https://www.youtube.com/watch?v=hJe5GNBu3R0">
+    <img width="800" alt="Travel Safe Pitch Video" src="https://img.youtube.com/vi/hJe5GNBu3R0/0.jpg">
+  </a>
+</p>
+
+## Screenshots
+
+<p align="center">
+  <b>Realtime object detection</b>
+  <br />
+  
   <img width="1728" alt="Demo" src="https://github.com/laurelin60/diamondhacks/assets/100006999/3937a3bb-cdd4-439b-af4e-18768f73ee30">
 </p>
+
+<br />
+
+<p align="center">
+  <b>Object detection and display pipeline</b>
+  <br />
+  
+  <img width="1728" alt="Demo with pipeline graphic" src="https://github.com/laurelin60/Travel-Safe/assets/100006999/0429da5d-f8e1-4200-b0c8-fdc395af2736">
+</p>
+
+
