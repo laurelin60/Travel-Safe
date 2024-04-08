@@ -1,4 +1,4 @@
-# Travel Safe ✈️ 👀 🥽
+# [Travel Safe ✈️ 👀 🥽](https://devpost.com/software/travel-safe)
 
 > ### Detect hazardous luggage with realtime, mixed-reality object detection
 
